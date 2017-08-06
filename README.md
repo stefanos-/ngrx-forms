@@ -1,4 +1,4 @@
-# [WIP - Very first approach!!!]
+# [WIP - Needs work!]
 
 ![alt tag](http://i.imgur.com/X9wM7pG.png)
 
