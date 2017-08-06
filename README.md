@@ -1,4 +1,6 @@
-# NgrxFormsPrototype
+# [WIP - Very first approach!!!]
+
+![alt tag](http://i.imgur.com/X9wM7pG.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
