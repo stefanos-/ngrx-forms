@@ -1,0 +1,14 @@
+{
+    "controls" : [
+        { 
+            "type": "text",
+            "name": "firstname",
+            "title": "First name"
+        },
+        { 
+            "type": "text",
+            "name": "lastname",
+            "title": "Last name"
+        }
+    ]
+}
