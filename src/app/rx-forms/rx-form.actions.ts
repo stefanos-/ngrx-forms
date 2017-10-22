@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { FormValidity } from './rx-forms.state';
+import { FormValidity } from './rx-form.state';
 
 export const SET_DATA = '[Rx Forms] Set Data';
 export const UPDATE_VALUE = '[Rx Forms] Update Value';
@@ -31,7 +31,7 @@ export class SetValidityAction implements Action {
   constructor(public payload: FormValidity) {}
 }
 
-export type RxFormsActions =
+export type RxFormActions =
   SetDataAction |
   SetValidityAction |
   UpdateValueAction |

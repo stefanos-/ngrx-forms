@@ -1,7 +1,7 @@
 
 import * as formsData from './deepChange';
 
-export const ngrxFormData = {
+export const rxFormData = {
 
     set: (data: any, path: string[], value: string) => {
         return formsData.deepChange(null, data, path, (clonedData, finalPath) => {

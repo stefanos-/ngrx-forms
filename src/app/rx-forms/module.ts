@@ -3,19 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { StoreModule } from '@ngrx/store';
 
-import { forms } from './rx-forms.reducers';
-import { RxFormsFieldDirective } from './rx-forms-field.directive';
+import { form } from './rx-form.reducers';
+import { RxFormFieldDirective } from './rx-form-field.directive';
+import { RxFormGroupDirective } from './rx-form-group.directive';
+import { RxFormDirective } from './rx-form.directive';
 
 @NgModule({
     imports: [
         CommonModule,
-        StoreModule.forFeature('forms', forms),
+        StoreModule.forFeature('form', form),
     ],
     declarations: [
-        RxFormsFieldDirective
+        RxFormFieldDirective,
+        RxFormGroupDirective,
+        RxFormDirective
     ],
     exports: [
-        RxFormsFieldDirective
+        RxFormFieldDirective,
+        RxFormGroupDirective,
+        RxFormDirective
     ],
 })
-export class RxFormsModule { }
+export class RxFormModule { }

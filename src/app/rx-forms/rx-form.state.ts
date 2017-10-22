@@ -1,5 +1,5 @@
 export interface FormState {
-    data: any;
+    model: any;
     validity: FormValidity;
 }
 

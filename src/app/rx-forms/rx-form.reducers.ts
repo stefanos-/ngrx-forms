@@ -1,20 +1,20 @@
 import { ActionReducer } from '@ngrx/store';
 
-import * as rxForm from './rx-forms.actions';
-import { FormState, FormValidity } from './rx-forms.state';
-import { rxFormData } from './rx-forms/api';
+import * as rxForm from './rx-form.actions';
+import { FormState, FormValidity } from './rx-form.state';
+import { rxFormData } from './rx-core/api';
 
 export const initialState: FormState = {
-    data: null,
+    model: {},
     validity: 'Valid'
 };
 
 export const formReducers = {
-    data: data,
+    model: model,
     validity: validity
 };
 
-export function data(state = initialState.data, action: rxForm.RxFormsActions): any {
+export function model(state = initialState.model, action: rxForm.RxFormActions): any {
     switch (action.type) {
         case rxForm.SET_DATA:
             return action.payload;
@@ -26,7 +26,7 @@ export function data(state = initialState.data, action: rxForm.RxFormsActions): 
     }
 }
 
-export function validity(state = initialState.validity, action: rxForm.RxFormsActions): FormValidity {
+export function validity(state = initialState.validity, action: rxForm.RxFormActions): FormValidity {
     switch (action.type) {
         case rxForm.SET_VALIDITY:
             return action.payload;
@@ -36,15 +36,13 @@ export function validity(state = initialState.validity, action: rxForm.RxFormsAc
     }
 }
 
-export function forms(state = [], action: rxForm.RxFormsActions): FormState[] {
+export function form(state = initialState, action: rxForm.RxFormActions): FormState {
     switch (action.type) {
         case rxForm.INITIALIZE_FORM:
-            return [{
-                data: data(null, action),
-                validity: validity(null, action)
-                },
-                ...state
-            ];
+            return {
+                    model: model(null, action),
+                    validity: validity(null, action)
+                };
         case rxForm.UPDATE_VALUE:
             // 1. Find the slice with the correct uuid
             // 2. call data reducer for this slice

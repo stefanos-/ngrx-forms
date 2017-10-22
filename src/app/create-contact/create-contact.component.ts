@@ -3,7 +3,7 @@ import { HttpClient } from '@angular//common/http';
 
 import { Store } from '@ngrx/store';
 
-import * as rxForms from '../rx-forms/rx-forms.actions';
+import * as rxForm from '../rx-forms/rx-form.actions';
 
 @Component({
     selector: 'app-create-contact',
@@ -18,7 +18,7 @@ export class CreateContactComponent implements OnInit {
 
     ngOnInit(): void {
         this.http.get('/assets/data.json').subscribe(data => {
-            this.store.dispatch(new rxForms.SetDataAction(data));
+            this.store.dispatch(new rxForm.SetDataAction(data));
         });
   }
 }

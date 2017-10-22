@@ -1,7 +1,9 @@
-<form>
-    First name:<br>
-    <input [rxFormField]="['firstname']"  type="text">
-    <br>
-    <br> Last name:<br>
-    <input [rxFormField]="['lastname']" type="text">
+<form rxForm>
+    <div rxFormGroup="person">
+        First name:<br>
+        <input rxFormField="['firstname']"  type="text">
+        <br>
+        <br> Last name:<br>
+        <input rxFormField="['lastname']" type="text">
+    </div>
 </form>

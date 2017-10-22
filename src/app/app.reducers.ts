@@ -3,10 +3,11 @@ import {
   createSelector,
   createFeatureSelector,
   ActionReducer,
+  MetaReducer
 } from '@ngrx/store';
 import { environment } from '../environments/environment';
 
-import * as forms from './rx-forms/rx-forms.reducers';
+import * as form from './rx-forms/rx-form.reducers';
 
 // export interface State {}
 
@@ -21,6 +22,6 @@ export function logger(reducer: ActionReducer<{}>): ActionReducer<any, any> {
   };
 }
 
-export const metaReducers: ActionReducer<any, any>[] = !environment.production
+export const metaReducers: MetaReducer<any>[] = !environment.production
   ? [logger]
   : [];
