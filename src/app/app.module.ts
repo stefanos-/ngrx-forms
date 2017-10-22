@@ -5,7 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { NgrxFormsModule } from './ngrx-forms/module';
+import { NgrxFormsModule } from './rx-forms/module';
 
 import { reducers , metaReducers} from './app.reducers';
 import { environment } from '../environments/environment';
@@ -18,7 +18,7 @@ import { CreateContactModule } from './create-contact/module';
     ],
     imports: [
         BrowserModule,
-        NgrxFormsModule,
+        RxFormsModule,
         StoreModule.forRoot(reducers, { metaReducers }),
         EffectsModule.forRoot([]),
         !environment.production ? StoreDevtoolsModule.instrument() : [],

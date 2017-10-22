@@ -1,10 +1,10 @@
 import { Action } from '@ngrx/store';
-import { FormValidity } from './ngrx-forms.state';
+import { FormValidity } from './rx-forms.state';
 
-export const SET_DATA = '[Ngrx Forms] Set Data';
-export const UPDATE_VALUE = '[Ngrx Forms] Update Value';
-export const SET_VALIDITY = '[Ngrx Forms] Set Validity';
-export const INITIALIZE_FORM = '[Ngrx Forms] Initialize form';
+export const SET_DATA = '[Rx Forms] Set Data';
+export const UPDATE_VALUE = '[Rx Forms] Update Value';
+export const SET_VALIDITY = '[Rx Forms] Set Validity';
+export const INITIALIZE_FORM = '[Rx Forms] Initialize form';
 
 
 export class InitializeFormAction implements Action {
@@ -31,7 +31,7 @@ export class SetValidityAction implements Action {
   constructor(public payload: FormValidity) {}
 }
 
-export type NgrxFormsActions =
+export type RxFormsActions =
   SetDataAction |
   SetValidityAction |
   UpdateValueAction |

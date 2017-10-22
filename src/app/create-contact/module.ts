@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CreateContactComponent } from './create-contact.component';
-import { NgrxFormsModule } from '../ngrx-forms/module';
+import { RxFormsModule } from '../rx-forms/module';
 
 @NgModule({
     imports: [
         CommonModule,
         HttpClientModule,
-        NgrxFormsModule
+        RxFormsModule
     ],
     declarations: [
         CreateContactComponent

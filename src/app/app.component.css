@@ -7,14 +7,3 @@ header {
     color: white;
     padding-left: 1em;
 }
-
-main {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    margin: 0;
-}
-
-main > .divider {
-    border: 1px solid #b5b3b3;
-}

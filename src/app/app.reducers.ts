@@ -6,7 +6,7 @@ import {
 } from '@ngrx/store';
 import { environment } from '../environments/environment';
 
-import * as forms from './ngrx-forms/ngrx-forms.reducers';
+import * as forms from './rx-forms/rx-forms.reducers';
 
 // export interface State {}
 
